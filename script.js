@@ -80,6 +80,7 @@ function rollDice(player) {
     player.currentScore += diceNo;
   } else if (diceNo === 1) {
     player.currentScore = 0;
+    switchPlayer();
   }
 }
 
@@ -112,7 +113,15 @@ function holdPressed(player) {
 }
 
 function switchPlayer() {
-  return;
+  if (currentPlayer == player0) {
+    currentPlayer = player1;
+    player0Element.classList.remove("player--active");
+    player1Element.classList.add("player--active");
+  } else if (currentPlayer == player1) {
+    currentPlayer = player0;
+    player1Element.classList.remove("player--active");
+    player0Element.classList.add("player--active");
+  }
 }
 
 function winAndHidebuttons() {

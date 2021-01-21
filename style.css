@@ -15,24 +15,26 @@ body {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   height: 100vh;
-  color: #333;
-  background-image: #048300;
-  background-color: #044101;
+  color: rgba(7, 7, 7, 0.815);
+  background-image: url("https://cdnb.artstation.com/p/assets/images/images/014/665/033/original/yargon-kerman-webp-net-gifmaker-39.gif?1544919451");
+  background-color: #000000;
+  background-size:cover;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 /* LAYOUT */
 main {
   position: relative;
-  width: 100rem;
-  height: 60rem;
-  background-color: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(200px);
+  width: 85rem;
+  height: 55rem;
+  background-color: rgba(56, 98, 105, 0.726);
+  backdrop-filter: blur(3px);
   filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-  border-radius: 9px;
+  border-radius: 120px;
   overflow: hidden;
   display: flex;
 }
@@ -44,12 +46,13 @@ main {
   flex-direction: column;
   align-items: center;
   transition: all 0.75s;
+  color: rgb(14, 170, 197);
 }
 
 /* ELEMENTS */
 .name {
   position: relative;
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
@@ -58,14 +61,14 @@ main {
 }
 
 .score {
-  font-size: 8rem;
+  font-size: 6.5rem;
   font-weight: 300;
-  color: #f70800;
+  color: #e8d6ff;
   margin-bottom: auto;
 }
 
 .player--active {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.733);
 }
 .player--active .name {
   font-weight: 700;
@@ -79,9 +82,9 @@ main {
 }
 
 .current {
-  background-color: #f50404;
+  background-color: #04f5f567;
   opacity: 0.8;
-  border-radius: 9px;
+  border-radius: 150px;
   color: #fff;
   width: 65%;
   padding: 2rem;
@@ -93,7 +96,7 @@ main {
   text-transform: uppercase;
   margin-bottom: 1rem;
   font-size: 1.7rem;
-  color: #ddd;
+  color: rgb(252, 252, 252);
 }
 
 .current-score {
@@ -115,12 +118,12 @@ main {
   font-weight: 400;
   transition: all 0.2s;
 
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgb(248, 244, 244);
+  background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
 
   padding: 0.7rem 2.5rem;
-  border-radius: 50rem;
+  border-radius: 10rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
@@ -132,12 +135,15 @@ main {
 
 .btn--new {
   top: 4rem;
+  color: whitesmoke;
 }
 .btn--roll {
   top: 39.3rem;
+  color: whitesmoke;
 }
 .btn--hold {
   top: 46.1rem;
+  color: whitesmoke;
 }
 
 .btn:active {
@@ -169,4 +175,97 @@ main {
 
 .hidden {
   display: none;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #21d4f3;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+
+
+button:hover {
+  color: #10c8f7;
+  background: #0303038e;
+  box-shadow: 0 0 10px #fffafa, 0 0 40px #f702f7, 0 0 60px #a408ecbd;
+  transition-delay: 1.3s;
+}
+
+
+button span {
+  position: absolute;
+  display: block;
+}
+
+
+
+
+button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #d65de6);
+}
+
+
+
+button:hover span:nth-child(1) {
+  left: 100%;
+  transition: 2s;
+}
+
+
+button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(270deg, transparent, #74ec04);
+}
+
+button:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+
+
+button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03f799);
+}
+
+button:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1.8s;
+  transition-delay: 0.25s;
+}
+
+
+
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #00fce7);
+}
+
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
 }
